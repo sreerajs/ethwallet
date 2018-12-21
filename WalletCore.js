@@ -21,7 +21,7 @@ function download(){
      var x = new Date();
      var UTCseconds = (x.getTime() + x.getTimezoneOffset()*60*1000)/1000;
      var addresses = global_keystore.getAddresses()[0];
-     var name = 'Keystore - ' + address + ' - ' + (new Date()).toUTCString() ;
+     var name = 'Keystore - ' + addresses + ' - ' + (new Date()).toUTCString() ;
      var element = document.createElement('a');
      var keystore = global_keystore.serialize();
      element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(keystore));
